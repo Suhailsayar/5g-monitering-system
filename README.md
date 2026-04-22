@@ -36,7 +36,7 @@
  Python 3.8+ installed.
  pip (Python package manager).
  Step-by-Step Guide
- Clone the Repository:Bashgit clone https://github.com/YOUR_USERNAME/5G-Monitor-India.git
+ Clone the Repository:Bashgit clone https://github.com/suhailsayar/5G-Monitor-India.git
 cd 5G-Monitor-India
 Install Dependencies:Bashpip install -r requirements.txt
 Run the Application:Start the Flask server locally.
