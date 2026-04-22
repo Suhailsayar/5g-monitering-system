@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
+
+:root {
+    --bg: #030712;
+    --glass: rgba(30, 41, 59, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --accent: #0ea5e9;
+    --active: #10b981;
+    --degraded: #f59e0b;
+    --offline: #f43f5e;
+}
+
+body {
+    background-color: var(--bg);
+    background-image: 
+        radial-gradient(circle at 0% 0%, rgba(14, 165, 233, 0.15) 0%, transparent 25%),
+        radial-gradient(circle at 100% 100%, rgba(139, 92, 246, 0.15) 0%, transparent 25%);
+    background-attachment: fixed;
+    color: #f8fafc;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    margin: 0;
+    padding: 2rem;
+    line-height: 1.5;
+}
+
+/* Glass Card Style */
+.card {
+    background: var(--glass);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 1.5rem;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+/* Header Section */
+header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+h1 {
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    font-size: 2.5rem;
+    background: linear-gradient(to right, #fff, var(--accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+}
+
+/* Stats Badges */
+.status-pills {
+    display: flex;
+    gap: 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.pill {
+    padding: 6px 16px;
+    border-radius: 99px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
+}
+
+/* Search Input */
+.search-container input {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--glass-border);
+    padding: 1rem 1.5rem;
+    border-radius: 16px;
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.search-container input:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 15px rgba(14, 165, 233, 0.3);
+}
+
+/* Grid Layout */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* Station Card Details */
+.tower-card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.tower-card:hover {
+    transform: scale(1.02);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.tower-status-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+}
+
+/* Metrics Row */
+.metric-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--glass-border);
+}
+
+.label { color: #94a3b8; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; }
+.value { font-weight: 700; color: #fff; }
+
+/* Status Colors */
+.active { background: var(--active); box-shadow: 0 0 10px var(--active); }
+.degraded { background: var(--degraded); }
+.offline { background: var(--offline); }

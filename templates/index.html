@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5G Monitor · India</title>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+<header>
+    <div class="logo">
+        <div class="logo-dot"></div>
+        <div>
+            <div class="logo-text">5G · MONITOR</div>
+            <div class="logo-sub">INDIA · 28 STATES + 8 UTs · 36 TOWERS</div>
+        </div>
+    </div>
+    <div class="hstats">
+        <div class="hstat"><div class="hstat-dot" style="background:#00f5d4"></div><span id="count-active">–</span> Active</div>
+        <div class="hstat"><div class="hstat-dot" style="background:#f7c059"></div><span id="count-degraded">–</span> Degraded</div>
+        <div class="hstat"><div class="hstat-dot" style="background:#ff3d5a"></div><span id="count-offline">–</span> Offline</div>
+        <div class="clock" id="clock">–</div>
+    </div>
+</header>
+<div class="main">
+    <div class="sidebar">
+        <div class="sidebar-title"><span>BASE STATIONS</span><span id="tower-count">36</span></div>
+        <input class="search-box" type="text" placeholder="Search state, city, operator..." id="search">
+        <div class="filter-bar">
+            <button class="filter-btn active" onclick="setFilter('all', this)">ALL</button>
+            <button class="filter-btn" onclick="setFilter('active', this)">ACTIVE</button>
+            <button class="filter-btn" onclick="setFilter('degraded', this)">DEGRADED</button>
+            <button class="filter-btn" onclick="setFilter('offline', this)">OFFLINE</button>
+            <button class="filter-btn" onclick="setFilter('state', this)">STATES</button>
+            <button class="filter-btn" onclick="setFilter('ut', this)">UTs</button>
+        </div>
+        <div id="tower-list"></div>
+    </div>
+    <div class="detail" id="detail">
+        <div class="detail-empty">
+            <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+                <circle cx="32" cy="32" r="30" stroke="#00f5d4" stroke-width="1.5" stroke-dasharray="3 3"></circle>
+                <circle cx="32" cy="32" r="18" stroke="#00f5d4" stroke-width="1" stroke-dasharray="3 3"></circle>
+                <circle cx="32" cy="32" r="4" fill="#00f5d4"></circle>
+            </svg>
+            SELECT A TOWER TO INSPECT
+        </div>
+    </div>
+</div>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
