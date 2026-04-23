@@ -284,3 +284,5 @@ function setFilter(filter, button) {
 // ─── Boot ─────────────────────────────────────────────────────────────────────
 fetchMetrics();
 setInterval(fetchMetrics, 15000);
+fetch("https://fiveg-monitering-system-3.onrender.com") 
+
