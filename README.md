@@ -53,4 +53,5 @@ You can adjust the BAND_MULT constants to change the performance levels of diffe
 5G bands (n78, n41, mmWave).
 📞 ContactProject Maintained by:Name:
 [suhail sayar]Roll Number: [230339]Email: [suhailsahil508@gmail.com]
+[Najmu Saqib] Roll Number: [230326]Email: [bhatnajmusaqib31427@gmail.com]
 Developed as part of a 5G Network Systems research project at GCET.
