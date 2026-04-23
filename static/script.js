@@ -29,7 +29,7 @@ document.getElementById("search").addEventListener("input", function () {
 });
 const API_BASE_URL = window.location.origin.includes("localhost")
   ? "http://localhost:5001" // Local development
-  : "http://127.0.0.1:5001"; // Replace with your live backend URL
+  : "https://fiveg-monitering-system-3.onrender.com/"; // Replace with your live backend URL
 // ─── Fetch ────────────────────────────────────────────────────────────────────
 
 async function fetchMetrics() {
@@ -284,5 +284,4 @@ function setFilter(filter, button) {
 // ─── Boot ─────────────────────────────────────────────────────────────────────
 fetchMetrics();
 setInterval(fetchMetrics, 15000);
-fetch("https://fiveg-monitering-system-3.onrender.com") 
 
