@@ -42,7 +42,7 @@ TOWERS = [
     {"id": "CH-030", "name": "Chandigarh UT", "city": "Chandigarh", "operator": "Vi", "status": "degraded", "band": "mmWave", "is_ut": True},
     {"id": "DN-031", "name": "Dadra & NH / DD", "city": "Daman", "operator": "Airtel", "status": "active", "band": "n78", "is_ut": True},
     {"id": "DL-032", "name": "Delhi", "city": "New Delhi", "operator": "Jio", "status": "offline", "band": "n41", "is_ut": True},
-    {"id": "JK-033", "name": "Jammu & Kashmir", "city": "Srinagar", "operator": "Vi", "status": "active", "band": "mmWave", "is_ut": True},
+    {"id": "JK-033", "name": "Jammu & Kashmir", "city": "Srinagar", "operator": "Airtel", "status": "active", "band": "mmWave", "is_ut": True},
     {"id": "LA-034", "name": "Ladakh", "city": "Leh", "operator": "Airtel", "status": "degraded", "band": "n78", "is_ut": True},
     {"id": "LD-035", "name": "Lakshadweep", "city": "Kavaratti", "operator": "Jio", "status": "active", "band": "n41", "is_ut": True},
     {"id": "PY-036", "name": "Puducherry", "city": "Puducherry", "operator": "Vi", "status": "offline", "band": "mmWave", "is_ut": True},
