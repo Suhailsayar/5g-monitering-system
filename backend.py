@@ -1,3 +1,4 @@
+import os
 from flask import Flask, jsonify, render_template
 import random
 import time
@@ -104,4 +105,5 @@ def tower_detail(tower_id):
     return jsonify({**tower, **simulate_metrics(tower)})
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5001)
+    port = int(os.environ.get("PORT", 10000))
+    app.run(host="0.0.0.0", port=port, debug=True)
